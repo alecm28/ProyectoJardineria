@@ -1,0 +1,58 @@
+﻿@model ProyectoJardineria.Models.Maquinaria
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Registrar maquinaria</h1>
+
+<h4>Maquinaria</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdInventario" class="control-label"></label>
+                <input asp-for="IdInventario" class="form-control" />
+                <span asp-validation-for="IdInventario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoMaquinaria" class="control-label"></label>
+                <input asp-for="TipoMaquinaria" class="form-control" />
+                <span asp-validation-for="TipoMaquinaria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HorasUsoActuales" class="control-label"></label>
+                <input asp-for="HorasUsoActuales" class="form-control" />
+                <span asp-validation-for="HorasUsoActuales" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HorasUsoMaxDia" class="control-label"></label>
+                <input asp-for="HorasUsoMaxDia" class="form-control" />
+                <span asp-validation-for="HorasUsoMaxDia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HorasUsoMantenimiento" class="control-label"></label>
+                <input asp-for="HorasUsoMantenimiento" class="form-control" />
+                <span asp-validation-for="HorasUsoMantenimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

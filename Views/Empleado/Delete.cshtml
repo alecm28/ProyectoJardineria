@@ -1,0 +1,56 @@
+﻿@model ProyectoJardineria.Models.Empleado
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar un empleado</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaEmpleado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CedulaEmpleado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NacimientoEmpleado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NacimientoEmpleado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LateralidadEmpleado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LateralidadEmpleado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IngresoEmpleado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IngresoEmpleado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SalarioEmpleado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SalarioEmpleado)
+        </dd>
+    </dl>
+
+    <div> 
+     <form asp-action="Delete" method="post">
+        <!-- Enviar la cédula del empleado para eliminarlo -->
+        <input type="hidden" name="CedulaEmpleado" value="@Model.CedulaEmpleado" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+     </form>
+    </div>
+
+    
+</div>

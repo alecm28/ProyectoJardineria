@@ -1,0 +1,68 @@
+﻿@model ProyectoJardineria.Models.Cliente
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Registrar un cliente</h1>
+
+<h4>Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdCliente" class="control-label"></label>
+                <input asp-for="IdCliente" class="form-control" />
+                <span asp-validation-for="IdCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreCliente" class="control-label"></label>
+                <input asp-for="NombreCliente" class="form-control" />
+                <span asp-validation-for="NombreCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProvinciaCliente" class="control-label"></label>
+                <input asp-for="ProvinciaCliente" class="form-control" />
+                <span asp-validation-for="ProvinciaCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CantonCliente" class="control-label"></label>
+                <input asp-for="CantonCliente" class="form-control" />
+                <span asp-validation-for="CantonCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DistritoCliente" class="control-label"></label>
+                <input asp-for="DistritoCliente" class="form-control" />
+                <span asp-validation-for="DistritoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DireccionCliente" class="control-label"></label>
+                <input asp-for="DireccionCliente" class="form-control" />
+                <span asp-validation-for="DireccionCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InviernoCliente" class="control-label"></label>
+                <input asp-for="InviernoCliente" class="form-control" />
+                <span asp-validation-for="InviernoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VeranoCliente" class="control-label"></label>
+                <input asp-for="VeranoCliente" class="form-control" />
+                <span asp-validation-for="VeranoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
